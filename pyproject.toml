@@ -3,9 +3,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "kubecert-updater"
+name = "kubeconfig-updater"
 version = "0.1.0"
-description = "A tool to update Kubernetes certificate data in kubeconfig"
+description = "A tool to update Kubernetes credentials in kubeconfig"
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-update-kube-config = "kubecert_updater.main:cli"
+update-kube-config = "kubeconfig_updater.main:cli"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/kubecert_updater"]
+packages = ["src/kubeconfig_updater"]
