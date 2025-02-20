@@ -13,7 +13,7 @@ from rich.prompt import Prompt
 from rich.theme import Theme
 from rich.traceback import install
 
-from kubecert_updater.schema import ClusterConfig, KubeConfig, UserConfig, UserEntry
+from kubeconfig_updater.schema import ClusterConfig, KubeConfig, UserConfig, UserEntry
 
 install(show_locals=True)
 
@@ -135,7 +135,7 @@ def backup_file(filepath: str) -> None:
 def main() -> None:
     console.print(
         Panel.fit(
-            "Kubernetes Certificate Updater",
+            "Kubernetes Config Updater",
             style="bold cyan",
         )
     )
@@ -261,12 +261,12 @@ def main() -> None:
                 yaml.safe_dump(local_config, f, sort_keys=False)
             console.print("[success]Updated ~/.kube/config[/success]")
             console.print(
-                "[success]Certificate data updated for the following contexts:[/success]"
+                "[success] Credentials updated for the following contexts:[/success]"
             )
             for ctx in updated_contexts:
                 console.print(f"[success] - {ctx}[/success]")
         else:
-            console.print("[info]No certificate updates required[/info]")
+            console.print("[info]No credential updates required[/info]")
     except Exception as e:
         console.print(f"[error]Error writing to {kubeconfig_path}: {str(e)}[/error]")
 
