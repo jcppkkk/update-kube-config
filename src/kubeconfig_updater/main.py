@@ -266,7 +266,7 @@ def main() -> None:
             for ctx in updated_contexts:
                 console.print(f"[success] - {ctx}[/success]")
         else:
-            console.print("[info]No credential updates required[/info]")
+            console.print("[info]All credentials are up-to-date[/info]")
     except Exception as e:
         console.print(f"[error]Error writing to {kubeconfig_path}: {str(e)}[/error]")
 
