@@ -13,13 +13,7 @@ This tool helps maintain your Kubernetes configurations by:
 
 ## Installation
 
-Install using `uvx` or `uv tool install`:
-
-```bash
-uvx install git+https://github.com/jcppkkk/update-kube-config.git
-```
-
-or
+Install with `uv tool install`:
 
 ```bash
 uv tool install git+https://github.com/jcppkkk/update-kube-config.git
@@ -30,6 +24,13 @@ uv tool install git+https://github.com/jcppkkk/update-kube-config.git
 Simply run:
 
 ```bash
+uvx --from git+https://github.com/jcppkkk/update-kube-config.git update-kube-config
+```
+
+or install the tool and run:
+
+```bash
+uv tool install git+https://github.com/jcppkkk/update-kube-config.git
 update-kube-config
 ```
 
