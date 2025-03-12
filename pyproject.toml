@@ -7,7 +7,7 @@ name = "kubeconfig-updater"
 version = "0.1.0"
 description = "A tool to update Kubernetes credentials in kubeconfig"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.12"
 license = "MIT"
 dependencies = [
     "pyyaml>=6.0",
